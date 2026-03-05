@@ -1,8 +1,9 @@
 import '@/styles'
 import { Head } from 'minista'
-import Header from '@/layouts/Header'
+import Sidebar from '@/layouts/Sidebar'
+import TopBar from '@/layouts/TopBar'
 import Content from '@/layouts/Content'
-import Footer from '@/layouts/Footer'
+import MobileTabBar from '@/layouts/MobileTabBar'
 import appleTouchIcon from '@/assets/favicons/apple-touch-icon.png'
 import favicon32 from '@/assets/favicons/favicon-32x32.png'
 import favicon16 from '@/assets/favicons/favicon-16x16.png'
@@ -14,16 +15,21 @@ export default (props) => {
   return (
     <>
       <Head htmlAttributes={{ lang: 'en' }}>
-        <title>Friendly Frontend Starter | {title}</title>
+        <title>GamesMark | {title}</title>
         <script src="/src/main.js" type="module" />
         <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
         <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
         <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
         <link rel="manifest" href={manifest} />
       </Head>
-      <Header url={url} />
-      <Content>{children}</Content>
-      <Footer />
+      <div className="app-layout">
+        <Sidebar url={url} />
+        <div className="app-layout__main">
+          <TopBar />
+          <Content>{children}</Content>
+        </div>
+      </div>
+      <MobileTabBar url={url} />
     </>
   )
 }

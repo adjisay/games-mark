@@ -1,6 +1,8 @@
-import Hero from '@/sections/Hero'
-import Button from '@/components/Button'
-import Field from '@/components/Field'
+import './index.scss'
+import HeroBanner from '@/sections/HeroBanner'
+import GamesSection from '@/sections/GamesSection'
+import CreateGame from '@/sections/CreateGame'
+import Notifications from '@/sections/Notifications'
 
 export const metadata = {
   title: 'Home',
@@ -8,20 +10,15 @@ export const metadata = {
 
 export default () => {
   return (
-    <>
-      <div className="container">
-        <h1>Home page</h1>
-        <Button>Button</Button>
-        <Button href="/">Link</Button>
-        <Field
-          label="Phone Number"
-          placeholder="+7 (999) 999-99-99"
-          inputMode="tel"
-          mask="+7 (000) 000-00-00"
-          isRequired
-        />
+    <div className="home-page">
+      <div className="home-page__main">
+        <HeroBanner />
+        <GamesSection />
       </div>
-      <Hero />
-    </>
+      <aside className="home-page__aside hidden-tablet">
+        <CreateGame />
+        <Notifications />
+      </aside>
+    </div>
   )
 }

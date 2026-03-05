@@ -1,15 +1,19 @@
 .button {
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   column-gap: 0.3em;
-  padding: 8px 12px;
-  color: var(--color-black);
-  background-color: var(--color-white);
-  border: var(--border);
-  border-radius: var(--border-radius-m);
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
 
   @include hover {
-    color: var(--color-white);
-    background-color: var(--color-accent);
+    background-color: var(--color-accent-dark);
   }
 }

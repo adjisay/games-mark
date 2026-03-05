@@ -15,10 +15,10 @@ export default (props) => {
     >
       <img
         className="logo__image"
-        src="/images/logo.svg"
+        src="/src/assets/images/main-logo.svg"
         alt=""
-        width={200}
-        height={68}
+        width={180}
+        height={40}
         loading={loading}
       />
     </a>

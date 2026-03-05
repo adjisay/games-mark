@@ -1,0 +1,22 @@
+.home-page {
+  display: grid;
+  grid-template-columns: 1fr fluid(308, 280);
+  column-gap: fluid(32, 16);
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(16, 12);
+    min-width: 0;
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(16, 12);
+  }
+}
