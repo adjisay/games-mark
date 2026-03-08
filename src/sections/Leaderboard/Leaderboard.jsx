@@ -1,5 +1,6 @@
 import './Leaderboard.scss'
 import clsx from 'clsx'
+import Section from '@/layouts/Section'
 
 const filters = ['All Sports', 'Football', 'Basketball', 'Tennis']
 
@@ -141,27 +142,74 @@ const currentUser = {
   points: '1,890',
 }
 
+const filtersMarkup = (
+  <div className="leaderboard__filters">
+    {filters.map((filter, index) => (
+      <button
+        className={clsx('leaderboard__filter', index === 0 && 'is-active')}
+        type="button"
+        key={filter}
+      >
+        {filter}
+      </button>
+    ))}
+  </div>
+)
+
+const renderRow = (row, extraClass) => (
+  <div className={clsx('leaderboard__row', extraClass)} key={row.rank}>
+    <span
+      className={clsx(
+        'leaderboard__cell leaderboard__cell--rank',
+        extraClass && 'leaderboard__cell--accent'
+      )}
+      style={{ color: row.rankColor }}
+    >
+      {row.rank}
+    </span>
+    <div className="leaderboard__cell leaderboard__cell--player">
+      <span
+        className="leaderboard__avatar"
+        style={{
+          color: row.color,
+          backgroundColor: `${row.color}1a`,
+        }}
+      >
+        {row.initials}
+      </span>
+      <span
+        className={clsx(
+          'leaderboard__player-name',
+          extraClass && 'leaderboard__player-name--you'
+        )}
+      >
+        {row.name}
+      </span>
+      {extraClass && <span className="leaderboard__you-badge">You</span>}
+    </div>
+    <span className="leaderboard__cell leaderboard__cell--center">
+      {row.games}
+    </span>
+    <span className="leaderboard__cell leaderboard__cell--center">
+      {row.wins}
+    </span>
+    <span className="leaderboard__cell leaderboard__cell--center leaderboard__cell--accent">
+      {row.winRate}
+    </span>
+    <span className="leaderboard__cell leaderboard__cell--right leaderboard__cell--bold">
+      {row.points}
+    </span>
+  </div>
+)
+
 export default () => {
   return (
-    <div className="leaderboard">
-      <div className="leaderboard__header">
-        <h3 className="leaderboard__title">Leaderboard</h3>
-        <div className="leaderboard__filters">
-          {filters.map((filter, index) => (
-            <button
-              className={clsx(
-                'leaderboard__filter',
-                index === 0 && 'is-active'
-              )}
-              type="button"
-              key={filter}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
-      </div>
-
+    <Section
+      className="leaderboard"
+      title="Leaderboard"
+      titleId="leaderboard-title"
+      actions={filtersMarkup}
+    >
       <div className="leaderboard__table-header">
         <span className="leaderboard__th leaderboard__th--rank">#</span>
         <span className="leaderboard__th leaderboard__th--player">Player</span>
@@ -173,79 +221,11 @@ export default () => {
         <span className="leaderboard__th leaderboard__th--right">Points</span>
       </div>
 
-      {rows.map((row) => (
-        <div className="leaderboard__row" key={row.rank}>
-          <span
-            className="leaderboard__cell leaderboard__cell--rank"
-            style={{ color: row.rankColor }}
-          >
-            {row.rank}
-          </span>
-          <div className="leaderboard__cell leaderboard__cell--player">
-            <span
-              className="leaderboard__avatar"
-              style={{
-                color: row.color,
-                backgroundColor: `${row.color}1a`,
-              }}
-            >
-              {row.initials}
-            </span>
-            <span className="leaderboard__player-name">{row.name}</span>
-          </div>
-          <span className="leaderboard__cell leaderboard__cell--center">
-            {row.games}
-          </span>
-          <span className="leaderboard__cell leaderboard__cell--center">
-            {row.wins}
-          </span>
-          <span className="leaderboard__cell leaderboard__cell--center leaderboard__cell--accent">
-            {row.winRate}
-          </span>
-          <span className="leaderboard__cell leaderboard__cell--right leaderboard__cell--bold">
-            {row.points}
-          </span>
-        </div>
-      ))}
+      {rows.map((row) => renderRow(row))}
 
       <div className="leaderboard__expand" data-js-leaderboard-expand>
         <div className="leaderboard__hidden-rows" data-js-leaderboard-hidden>
-          <div>
-            {hiddenRows.map((row) => (
-              <div className="leaderboard__row" key={row.rank}>
-                <span
-                  className="leaderboard__cell leaderboard__cell--rank"
-                  style={{ color: row.rankColor }}
-                >
-                  {row.rank}
-                </span>
-                <div className="leaderboard__cell leaderboard__cell--player">
-                  <span
-                    className="leaderboard__avatar"
-                    style={{
-                      color: row.color,
-                      backgroundColor: `${row.color}1a`,
-                    }}
-                  >
-                    {row.initials}
-                  </span>
-                  <span className="leaderboard__player-name">{row.name}</span>
-                </div>
-                <span className="leaderboard__cell leaderboard__cell--center">
-                  {row.games}
-                </span>
-                <span className="leaderboard__cell leaderboard__cell--center">
-                  {row.wins}
-                </span>
-                <span className="leaderboard__cell leaderboard__cell--center leaderboard__cell--accent">
-                  {row.winRate}
-                </span>
-                <span className="leaderboard__cell leaderboard__cell--right leaderboard__cell--bold">
-                  {row.points}
-                </span>
-              </div>
-            ))}
-          </div>
+          <div>{hiddenRows.map((row) => renderRow(row))}</div>
         </div>
         <button
           className="leaderboard__gap"
@@ -258,38 +238,7 @@ export default () => {
         </button>
       </div>
 
-      <div className="leaderboard__row leaderboard__row--you">
-        <span className="leaderboard__cell leaderboard__cell--rank leaderboard__cell--accent">
-          {currentUser.rank}
-        </span>
-        <div className="leaderboard__cell leaderboard__cell--player">
-          <span
-            className="leaderboard__avatar"
-            style={{
-              color: currentUser.color,
-              backgroundColor: `${currentUser.color}1a`,
-            }}
-          >
-            {currentUser.initials}
-          </span>
-          <span className="leaderboard__player-name leaderboard__player-name--you">
-            {currentUser.name}
-          </span>
-          <span className="leaderboard__you-badge">You</span>
-        </div>
-        <span className="leaderboard__cell leaderboard__cell--center">
-          {currentUser.games}
-        </span>
-        <span className="leaderboard__cell leaderboard__cell--center">
-          {currentUser.wins}
-        </span>
-        <span className="leaderboard__cell leaderboard__cell--center leaderboard__cell--accent">
-          {currentUser.winRate}
-        </span>
-        <span className="leaderboard__cell leaderboard__cell--right leaderboard__cell--bold">
-          {currentUser.points}
-        </span>
-      </div>
-    </div>
+      {renderRow(currentUser, 'leaderboard__row--you')}
+    </Section>
   )
 }

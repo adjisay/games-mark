@@ -1,5 +1,6 @@
 import './Notifications.scss'
 import Icon from '@/components/Icon'
+import Section from '@/layouts/Section'
 
 const notificationsData = [
   {
@@ -24,7 +25,7 @@ const notificationsData = [
 
 export default () => {
   return (
-    <div className="notifications-panel">
+    <Section className="notifications-panel" hideOnMobile>
       <div className="notifications-panel__header">
         <Icon
           className="notifications-panel__header-icon"
@@ -46,6 +47,6 @@ export default () => {
           </li>
         ))}
       </ul>
-    </div>
+    </Section>
   )
 }

@@ -1,5 +1,5 @@
 import './LinkedAccounts.scss'
-import SettingsCard from '@/components/SettingsCard'
+import Section from '@/layouts/Section'
 
 const accounts = [
   { name: 'Google', connected: true },
@@ -9,7 +9,12 @@ const accounts = [
 
 export default () => {
   return (
-    <SettingsCard title="Linked Accounts" className="linked-accounts">
+    <Section
+      className="linked-accounts"
+      title="Linked Accounts"
+      titleId="linked-accounts-title"
+      hideOnMobile
+    >
       <div className="linked-accounts__list">
         {accounts.map((account) => (
           <div className="linked-accounts__row" key={account.name}>
@@ -23,6 +28,6 @@ export default () => {
           </div>
         ))}
       </div>
-    </SettingsCard>
+    </Section>
   )
 }

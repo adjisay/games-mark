@@ -12,15 +12,11 @@ export const metadata = {
 export default () => {
   return (
     <div className="ratings-page">
-      <div className="ratings-page__main">
-        <TopPlayers />
-        <Leaderboard />
-      </div>
-      <aside className="ratings-page__aside hidden-tablet">
-        <YourRanking />
-        <TopSports />
-        <WeeklyChallenge />
-      </aside>
+      <TopPlayers />
+      <Leaderboard />
+      <YourRanking />
+      <TopSports />
+      <WeeklyChallenge />
     </div>
   )
 }

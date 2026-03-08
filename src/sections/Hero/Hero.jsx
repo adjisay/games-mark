@@ -1,9 +1,10 @@
 import './Hero.scss'
+import Section from '@/layouts/Section'
 
 export default () => {
   return (
-    <section className="hero" aria-labelledby="hero-title">
+    <Section className="hero">
       <div className="hero__inner container">Hero section content</div>
-    </section>
+    </Section>
   )
 }

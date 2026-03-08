@@ -1,9 +1,10 @@
 import './HeroBanner.scss'
 import Button from '@/components/Button'
+import Section from '@/layouts/Section'
 
 export default () => {
   return (
-    <section className="hero-banner" aria-labelledby="hero-banner-title">
+    <Section className="hero-banner">
       <div className="hero-banner__content">
         <h1 className="hero-banner__title" id="hero-banner-title">
           Check your current &amp; upcoming games activities here.
@@ -18,6 +19,6 @@ export default () => {
       <div className="hero-banner__illustration">
         <div className="hero-banner__illustration-placeholder" />
       </div>
-    </section>
+    </Section>
   )
 }

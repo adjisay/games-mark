@@ -1,18 +1,32 @@
 .section {
-  display: grid;
-  row-gap: fluid(80, 40);
-  padding-block: 50px;
-
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 16px;
+    margin-bottom: fluid(20, 16);
 
     @include mobile {
       flex-direction: column;
-      align-items: start;
-      row-gap: 20px;
+      align-items: flex-start;
+      row-gap: 12px;
     }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title {
+    font-size: fluid(20, 17);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  &__description {
+    font-size: 14px;
+    color: var(--color-text-muted);
   }
 }

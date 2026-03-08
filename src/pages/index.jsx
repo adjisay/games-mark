@@ -11,14 +11,10 @@ export const metadata = {
 export default () => {
   return (
     <div className="home-page">
-      <div className="home-page__main">
-        <HeroBanner />
-        <GamesSection />
-      </div>
-      <aside className="home-page__aside hidden-tablet">
-        <CreateGame />
-        <Notifications />
-      </aside>
+      <HeroBanner />
+      <GamesSection />
+      <CreateGame />
+      <Notifications />
     </div>
   )
 }

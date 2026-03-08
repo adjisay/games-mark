@@ -1,7 +1,7 @@
 import '@/styles'
 import { Head } from 'minista'
 import Sidebar from '@/layouts/Sidebar'
-import TopBar from '@/layouts/TopBar'
+import Header from '@/layouts/Header'
 import Content from '@/layouts/Content'
 import MobileTabBar from '@/layouts/MobileTabBar'
 import appleTouchIcon from '@/assets/favicons/apple-touch-icon.png'
@@ -25,7 +25,7 @@ export default (props) => {
       <div className="app-layout">
         <Sidebar url={url} />
         <div className="app-layout__main">
-          <TopBar />
+          <Header />
           <Content>{children}</Content>
         </div>
       </div>

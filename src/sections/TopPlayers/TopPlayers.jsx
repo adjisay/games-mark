@@ -1,5 +1,6 @@
 import './TopPlayers.scss'
 import clsx from 'clsx'
+import Section from '@/layouts/Section'
 
 const players = [
   {
@@ -33,8 +34,11 @@ const players = [
 
 export default () => {
   return (
-    <div className="top-players">
-      <h3 className="top-players__title">Top Players</h3>
+    <Section
+      className="top-players"
+      title="Top Players"
+      titleId="top-players-title"
+    >
       <div className="top-players__podium">
         {players.map((player) => (
           <div
@@ -66,6 +70,6 @@ export default () => {
           </div>
         ))}
       </div>
-    </div>
+    </Section>
   )
 }

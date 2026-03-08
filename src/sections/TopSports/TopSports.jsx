@@ -1,4 +1,5 @@
 import './TopSports.scss'
+import Section from '@/layouts/Section'
 
 const sports = [
   {
@@ -26,8 +27,12 @@ const sports = [
 
 export default () => {
   return (
-    <div className="top-sports">
-      <h3 className="top-sports__title">Top Sports</h3>
+    <Section
+      className="top-sports"
+      title="Top Sports"
+      titleId="top-sports-title"
+      hideOnMobile
+    >
       <div className="top-sports__list">
         {sports.map((sport) => (
           <div className="top-sports__row" key={sport.name}>
@@ -49,6 +54,6 @@ export default () => {
           </div>
         ))}
       </div>
-    </div>
+    </Section>
   )
 }

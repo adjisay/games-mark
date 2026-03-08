@@ -1,5 +1,6 @@
 import './ProfileInfo.scss'
 import Icon from '@/components/Icon'
+import Section from '@/layouts/Section'
 
 const fieldsData = [
   { label: 'Full Name', value: 'Daniella Rake' },
@@ -8,16 +9,21 @@ const fieldsData = [
   { label: 'Date of Birth', value: 'March 15, 1992' },
 ]
 
+const editButton = (
+  <button className="profile-info__edit-btn" type="button">
+    <Icon className="profile-info__edit-icon" name="plus" />
+    <span>Edit Profile</span>
+  </button>
+)
+
 export default () => {
   return (
-    <div className="profile-info settings-card">
-      <div className="profile-info__header">
-        <h3 className="settings-card__title">Profile Information</h3>
-        <button className="profile-info__edit-btn" type="button">
-          <Icon className="profile-info__edit-icon" name="plus" />
-          <span>Edit Profile</span>
-        </button>
-      </div>
+    <Section
+      className="profile-info"
+      title="Profile Information"
+      titleId="profile-info-title"
+      actions={editButton}
+    >
       <div className="profile-info__user">
         <div className="profile-info__avatar">
           <span className="profile-info__avatar-text">DR</span>
@@ -37,6 +43,6 @@ export default () => {
           </div>
         ))}
       </div>
-    </div>
+    </Section>
   )
 }

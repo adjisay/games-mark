@@ -1,22 +1,36 @@
 .ratings-page {
   display: grid;
   grid-template-columns: 1fr fluid(308, 280);
-  column-gap: fluid(32, 16);
+  grid-template-areas:
+    'top-players ranking'
+    'leaderboard sports'
+    'leaderboard challenge';
+  gap: fluid(24, 16);
 
   @include tablet {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      'top-players'
+      'leaderboard';
   }
 
-  &__main {
-    display: flex;
-    flex-direction: column;
-    row-gap: fluid(24, 16);
-    min-width: 0;
+  .top-players {
+    grid-area: top-players;
   }
 
-  &__aside {
-    display: flex;
-    flex-direction: column;
-    row-gap: fluid(16, 12);
+  .leaderboard {
+    grid-area: leaderboard;
+  }
+
+  .your-ranking {
+    grid-area: ranking;
+  }
+
+  .top-sports {
+    grid-area: sports;
+  }
+
+  .weekly-challenge {
+    grid-area: challenge;
   }
 }

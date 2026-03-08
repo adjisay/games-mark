@@ -1,4 +1,6 @@
 .linked-accounts {
+  @include card-container;
+
   &__list {
     display: flex;
     flex-direction: column;

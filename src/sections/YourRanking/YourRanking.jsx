@@ -1,5 +1,6 @@
 import './YourRanking.scss'
 import Icon from '@/components/Icon'
+import Section from '@/layouts/Section'
 
 const stats = [
   { value: '156', label: 'Games' },
@@ -9,8 +10,12 @@ const stats = [
 
 export default () => {
   return (
-    <div className="your-ranking">
-      <h3 className="your-ranking__title">Your Ranking</h3>
+    <Section
+      className="your-ranking"
+      title="Your Ranking"
+      titleId="your-ranking-title"
+      hideOnMobile
+    >
       <div className="your-ranking__rank-circle">
         <span className="your-ranking__rank-num">#12</span>
       </div>
@@ -31,6 +36,6 @@ export default () => {
           </div>
         ))}
       </div>
-    </div>
+    </Section>
   )
 }

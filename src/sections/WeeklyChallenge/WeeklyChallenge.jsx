@@ -1,9 +1,10 @@
 import './WeeklyChallenge.scss'
 import Icon from '@/components/Icon'
+import Section from '@/layouts/Section'
 
 export default () => {
   return (
-    <div className="weekly-challenge">
+    <Section className="weekly-challenge" hideOnMobile>
       <div className="weekly-challenge__heading">
         <Icon className="weekly-challenge__heading-icon" name="trophy" />
         <span className="weekly-challenge__heading-text">Weekly Challenge</span>
@@ -27,6 +28,6 @@ export default () => {
         <Icon className="weekly-challenge__reward-icon" name="trophy" />
         <span>Reward: +500 bonus points</span>
       </div>
-    </div>
+    </Section>
   )
 }

@@ -1,20 +1,10 @@
 .your-ranking {
+  @include card-container;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: fluid(24, 16);
-  background-color: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: 24px;
-  box-shadow: var(--shadow-card);
-
-  &__title {
-    align-self: flex-start;
-    font-size: fluid(18, 16);
-    font-weight: 600;
-    color: var(--color-text-primary);
-  }
 
   &__rank-circle {
     display: flex;

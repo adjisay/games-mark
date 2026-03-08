@@ -1,4 +1,6 @@
-.notification-settings {
+.settings-section {
+  @include card-container;
+
   &__list {
     display: flex;
     flex-direction: column;

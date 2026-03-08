@@ -1,5 +1,5 @@
 import './ProfileSummary.scss'
-import SettingsCard from '@/components/SettingsCard'
+import Section from '@/layouts/Section'
 
 const stats = [
   { label: 'Games', value: '156' },
@@ -9,7 +9,7 @@ const stats = [
 
 export default () => {
   return (
-    <SettingsCard className="profile-summary">
+    <Section className="profile-summary" hideOnMobile>
       <div className="profile-summary__avatar">DR</div>
       <h3 className="profile-summary__name">Daniel Robertson</h3>
       <span className="profile-summary__role">Pro Player</span>
@@ -22,6 +22,6 @@ export default () => {
         ))}
       </div>
       <span className="profile-summary__member">Member since January 2024</span>
-    </SettingsCard>
+    </Section>
   )
 }

@@ -1,16 +1,4 @@
 .games-section {
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: fluid(20, 16);
-  }
-
-  &__title {
-    font-size: fluid(24, 18);
-    font-weight: 500;
-  }
-
   &__controls {
     display: flex;
     align-items: center;

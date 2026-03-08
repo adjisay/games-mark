@@ -1,9 +1,5 @@
 .profile-info {
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  @include card-container;
 
   &__edit-btn {
     display: flex;

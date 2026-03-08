@@ -1,4 +1,6 @@
 .danger-zone {
+  @include card-container;
+
   border-color: var(--color-red) !important;
 
   &__actions {

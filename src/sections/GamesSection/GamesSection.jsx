@@ -1,6 +1,7 @@
 import './GamesSection.scss'
 import Icon from '@/components/Icon'
 import GameCard from '@/components/GameCard'
+import Section from '@/layouts/Section'
 
 const gamesData = [
   {
@@ -29,31 +30,34 @@ const gamesData = [
   },
 ]
 
+const controlsMarkup = (
+  <div className="games-section__controls">
+    <button className="games-section__view-btn is-active" type="button">
+      <Icon name="grid-view" />
+    </button>
+    <button className="games-section__view-btn" type="button">
+      <Icon name="list-view" />
+    </button>
+    <div className="games-section__sort">
+      <Icon className="games-section__sort-icon" name="sort" />
+      <span>Newest</span>
+    </div>
+  </div>
+)
+
 export default () => {
   return (
-    <section className="games-section" aria-labelledby="games-section-title">
-      <div className="games-section__header">
-        <h2 className="games-section__title" id="games-section-title">
-          Games
-        </h2>
-        <div className="games-section__controls">
-          <button className="games-section__view-btn is-active" type="button">
-            <Icon name="grid-view" />
-          </button>
-          <button className="games-section__view-btn" type="button">
-            <Icon name="list-view" />
-          </button>
-          <div className="games-section__sort">
-            <Icon className="games-section__sort-icon" name="sort" />
-            <span>Newest</span>
-          </div>
-        </div>
-      </div>
+    <Section
+      className="games-section"
+      title="Games"
+      titleId="games-section-title"
+      actions={controlsMarkup}
+    >
       <div className="games-section__list">
         {gamesData.map((game, index) => (
           <GameCard key={index} {...game} />
         ))}
       </div>
-    </section>
+    </Section>
   )
 }

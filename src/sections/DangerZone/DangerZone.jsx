@@ -1,10 +1,15 @@
 import './DangerZone.scss'
-import SettingsCard from '@/components/SettingsCard'
 import Icon from '@/components/Icon'
+import Section from '@/layouts/Section'
 
 export default () => {
   return (
-    <SettingsCard title="Danger Zone" className="danger-zone">
+    <Section
+      className="danger-zone"
+      title="Danger Zone"
+      titleId="danger-zone-title"
+      hideOnMobile
+    >
       <div className="danger-zone__actions">
         <button
           className="danger-zone__btn danger-zone__btn--logout"
@@ -20,6 +25,6 @@ export default () => {
           Delete Account
         </button>
       </div>
-    </SettingsCard>
+    </Section>
   )
 }
