@@ -1,0 +1,30 @@
+.notification-settings {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: fluid(16, 10) 0;
+  }
+
+  &__row-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__row-title {
+    font-size: fluid(15, 14);
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  &__row-desc {
+    font-size: fluid(13, 11);
+    color: var(--color-text-muted);
+  }
+}

@@ -1,0 +1,112 @@
+.top-players {
+  padding: fluid(24, 16);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+
+  &__title {
+    margin-bottom: fluid(20, 16);
+    font-size: fluid(20, 17);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  &__podium {
+    display: flex;
+    justify-content: center;
+    gap: fluid(20, 12);
+  }
+
+  &__card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: fluid(24, 16) fluid(20, 12);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+
+    &--gold {
+      background-color: #fefce8;
+      border-width: 1.5px;
+      border-color: #fde047;
+    }
+  }
+
+  &__badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: var(--border-radius-full);
+
+    &--gold {
+      width: 36px;
+      height: 36px;
+      font-size: 18px;
+      background-color: #eab308;
+    }
+
+    &--silver {
+      background-color: #c0c0c0;
+    }
+
+    &--bronze {
+      background-color: #cd7f32;
+    }
+  }
+
+  &__avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: var(--border-radius-full);
+
+    .top-players__card--gold & {
+      width: 72px;
+      height: 72px;
+      font-size: 26px;
+    }
+  }
+
+  &__name {
+    font-size: fluid(15, 13);
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-text-primary);
+
+    .top-players__card--gold & {
+      font-size: fluid(16, 14);
+    }
+  }
+
+  &__points {
+    font-size: fluid(13, 12);
+    font-weight: 500;
+    color: var(--color-text-muted);
+
+    .top-players__card--gold & {
+      font-size: fluid(14, 13);
+    }
+  }
+
+  &__win-rate {
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-accent);
+    background-color: var(--color-accent-light);
+    border-radius: var(--border-radius-full);
+  }
+}

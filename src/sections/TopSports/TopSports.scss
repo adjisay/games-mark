@@ -1,0 +1,53 @@
+.top-sports {
+  padding: fluid(24, 16);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+
+  &__title {
+    margin-bottom: fluid(14, 10);
+    font-size: fluid(18, 16);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  &__sport {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  &__name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  &__rank {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

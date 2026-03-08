@@ -1,0 +1,74 @@
+.app-settings {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: fluid(16, 10) 0;
+  }
+
+  &__row-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__row-title {
+    font-size: fluid(15, 14);
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  &__row-desc {
+    font-size: fluid(13, 11);
+    color: var(--color-text-muted);
+  }
+
+  &__theme-selector {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__theme-btn {
+    padding: fluid(8, 6) 16px;
+    font-family: var(--font-family-base);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-full);
+    cursor: pointer;
+
+    &.is-active {
+      color: var(--color-accent);
+      background-color: var(--color-accent-light);
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__dropdown {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: fluid(8, 6) 16px;
+    font-family: var(--font-family-base);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  &__dropdown-icon {
+    width: 14px;
+    height: 14px;
+    color: var(--color-text-muted);
+  }
+}

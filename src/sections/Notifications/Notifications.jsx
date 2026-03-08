@@ -26,7 +26,10 @@ export default () => {
   return (
     <div className="notifications-panel">
       <div className="notifications-panel__header">
-        <Icon className="notifications-panel__header-icon" name="notification" />
+        <Icon
+          className="notifications-panel__header-icon"
+          name="notification"
+        />
         <h3 className="notifications-panel__title">Notifications</h3>
       </div>
       <ul className="notifications-panel__list">

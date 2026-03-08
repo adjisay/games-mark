@@ -1,0 +1,97 @@
+.profile-info {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__edit-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    font-family: var(--font-family-base);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-bg-white);
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: var(--border-radius-full);
+    cursor: pointer;
+  }
+
+  &__edit-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: fluid(20, 12);
+  }
+
+  &__avatar {
+    @include flex-center;
+
+    flex-shrink: 0;
+    width: fluid(80, 64);
+    height: fluid(80, 64);
+    background-color: var(--color-accent-light);
+    border-radius: 50%;
+  }
+
+  &__avatar-text {
+    font-size: fluid(28, 22);
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__user-name {
+    font-size: fluid(18, 16);
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  &__user-role {
+    font-size: 14px;
+    color: var(--color-text-muted);
+  }
+
+  &__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: fluid(20, 16);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__field-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+  }
+
+  &__field-input {
+    padding: fluid(12, 11) fluid(16, 14);
+    font-size: 14px;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+  }
+}

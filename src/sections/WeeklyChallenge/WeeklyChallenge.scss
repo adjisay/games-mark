@@ -1,0 +1,85 @@
+.weekly-challenge {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: fluid(24, 16);
+  background-color: #fefce8;
+  border: 1px solid #fde047;
+  border-radius: 24px;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__heading-icon {
+    width: 20px;
+    height: 20px;
+    color: #eab308;
+  }
+
+  &__heading-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  &__desc {
+    font-size: 13px;
+    color: var(--color-text-muted);
+  }
+
+  &__progress {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__progress-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__progress-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+  }
+
+  &__progress-value {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  &__bar-bg {
+    height: 8px;
+    background-color: rgb(253 224 71 / 50%);
+    border-radius: var(--border-radius-full);
+  }
+
+  &__bar-fill {
+    height: 100%;
+    background-color: #eab308;
+    border-radius: var(--border-radius-full);
+  }
+
+  &__reward {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #92400e;
+    background-color: rgb(253 224 71 / 25%);
+    border-radius: 12px;
+  }
+
+  &__reward-icon {
+    width: 16px;
+    height: 16px;
+    color: #eab308;
+  }
+}

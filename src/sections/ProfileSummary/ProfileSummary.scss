@@ -1,0 +1,66 @@
+.profile-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fluid(80, 64);
+    height: fluid(80, 64);
+    font-size: fluid(24, 20);
+    font-weight: 700;
+    color: var(--color-accent);
+    background-color: var(--color-accent-light);
+    border-radius: var(--border-radius-full);
+  }
+
+  &__name {
+    margin-top: fluid(12, 8);
+    font-size: fluid(17, 15);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  &__role {
+    margin-top: 4px;
+    font-size: fluid(13, 12);
+    color: var(--color-text-muted);
+  }
+
+  &__stats {
+    display: flex;
+    gap: fluid(24, 16);
+    width: 100%;
+    margin-top: fluid(20, 16);
+    padding-top: fluid(20, 16);
+    border-top: 1px solid var(--color-border);
+  }
+
+  &__stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  &__stat-value {
+    font-size: fluid(16, 14);
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  &__stat-label {
+    font-size: fluid(12, 11);
+    color: var(--color-text-muted);
+  }
+
+  &__member {
+    margin-top: fluid(16, 12);
+    font-size: fluid(12, 11);
+    color: var(--color-text-muted);
+  }
+}

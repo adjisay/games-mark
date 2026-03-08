@@ -42,7 +42,8 @@
       font-weight: 500;
       color: var(--color-text-secondary);
       border-right: 2px solid transparent;
-      transition: color var(--transition-duration),
+      transition:
+        color var(--transition-duration),
         border-color var(--transition-duration);
 
       @include hover {
