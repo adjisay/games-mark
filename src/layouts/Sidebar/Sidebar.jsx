@@ -25,7 +25,8 @@ export default (props) => {
                 <a
                   className={clsx(
                     'sidebar__menu-link',
-                    href === url && 'is-active'
+                    (href === '/' ? url === '/' : url?.startsWith(href)) &&
+                      'is-active'
                   )}
                   href={href}
                 >

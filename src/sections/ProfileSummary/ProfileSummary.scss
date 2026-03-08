@@ -13,7 +13,7 @@
     width: fluid(80, 64);
     height: fluid(80, 64);
     font-size: fluid(24, 20);
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-accent);
     background-color: var(--color-accent-light);
     border-radius: var(--border-radius-full);
@@ -22,7 +22,7 @@
   &__name {
     margin-top: fluid(12, 8);
     font-size: fluid(17, 15);
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-text-primary);
   }
 
@@ -51,7 +51,7 @@
 
   &__stat-value {
     font-size: fluid(16, 14);
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-text-primary);
   }
 

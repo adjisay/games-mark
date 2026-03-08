@@ -1,7 +1,5 @@
 .header {
   padding: fluid(16, 8) fluid(24, 16);
-  background-color: var(--color-bg-white);
-  border-bottom: 1px solid var(--color-border);
 
   &__inner {
     display: flex;
@@ -133,7 +131,7 @@
       @include square(32px);
 
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 500;
       color: var(--color-accent);
       background-color: var(--color-accent-light);
       border: 2px solid var(--color-bg-white);

@@ -20,7 +20,8 @@ export default (props) => {
             <a
               className={clsx(
                 'mobile-tab-bar__link',
-                href === url && 'is-active'
+                (href === '/' ? url === '/' : url?.startsWith(href)) &&
+                  'is-active'
               )}
               href={href}
             >
