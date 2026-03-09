@@ -1,4 +1,3 @@
-import './index.scss'
 import ProfileInfo from '@/sections/ProfileInfo'
 import SettingsSection from '@/sections/SettingsSection'
 import ToggleSwitch from '@/components/ToggleSwitch'
@@ -87,7 +86,7 @@ export const metadata = {
 
 export default () => {
   return (
-    <div className="settings-page">
+    <div className="page-grid settings-page">
       <ProfileInfo />
       <SettingsSection
         title="Notification Settings"

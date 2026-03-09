@@ -1,0 +1,52 @@
+.achievements {
+  @include card-container;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 16px;
+
+    &:first-child {
+      background-color: #f7fef4;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+
+    .icon {
+      @include square(20px);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  &__desc {
+    font-size: 12px;
+    color: var(--color-text-muted);
+  }
+}

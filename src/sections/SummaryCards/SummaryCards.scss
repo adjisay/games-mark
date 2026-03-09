@@ -1,0 +1,51 @@
+.summary-cards {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+  }
+
+  &__card {
+    @include card-container;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: fluid(48, 40);
+    height: fluid(48, 40);
+    border-radius: 14px;
+
+    .icon {
+      @include square(24px);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__value {
+    font-size: fluid(28, 20);
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  &__label {
+    font-size: 14px;
+    color: var(--color-text-muted);
+  }
+}

@@ -1,0 +1,135 @@
+.tournament-progress {
+  @include card-container;
+
+  &__table {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: var(--color-bg);
+    border-radius: 12px;
+  }
+
+  &__th {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+
+    &--league {
+      flex: 1;
+    }
+
+    &--wl {
+      width: 60px;
+    }
+
+    &--pos {
+      width: 40px;
+    }
+
+    &--status {
+      width: 80px;
+      text-align: right;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-border);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__cell {
+    font-size: 14px;
+    color: var(--color-text-primary);
+
+    &--league {
+      flex: 1;
+      font-weight: 500;
+    }
+
+    &--wl {
+      width: 60px;
+    }
+
+    &--pos {
+      width: 40px;
+      font-weight: 500;
+    }
+  }
+
+  &__badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 8px;
+
+    &--live {
+      color: #4caf50;
+      background-color: #e8f5e9;
+    }
+
+    &--upcoming {
+      color: #2babee;
+      background-color: #edf9ff;
+    }
+
+    &--finished {
+      color: var(--color-text-muted);
+      background-color: var(--color-bg);
+    }
+  }
+
+  &__list {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__list-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-border);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__list-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__list-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  &__list-meta {
+    font-size: 12px;
+    color: var(--color-text-muted);
+  }
+}

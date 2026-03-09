@@ -1,0 +1,163 @@
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr fluid(308, 280);
+  gap: fluid(24, 16);
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Matches (Home)
+.matches-page {
+  grid-template-areas:
+    'hero create'
+    'games notifications';
+
+  @include tablet {
+    grid-template-areas:
+      'hero'
+      'games';
+  }
+
+  .hero-banner {
+    grid-area: hero;
+  }
+
+  .games-section {
+    grid-area: games;
+  }
+
+  .create-game {
+    grid-area: create;
+  }
+
+  .notifications-panel {
+    grid-area: notifications;
+  }
+}
+
+// Stats
+.stats-page {
+  grid-template-areas:
+    'summary summary'
+    'tournament sports'
+    'results achievements'
+    'results partners';
+
+  @include tablet {
+    grid-template-areas:
+      'summary'
+      'tournament'
+      'results';
+  }
+
+  .summary-cards {
+    grid-area: summary;
+  }
+
+  .tournament-progress {
+    grid-area: tournament;
+  }
+
+  .recent-results {
+    grid-area: results;
+  }
+
+  .sports-breakdown {
+    grid-area: sports;
+  }
+
+  .achievements {
+    grid-area: achievements;
+  }
+
+  .top-partners {
+    grid-area: partners;
+  }
+}
+
+// Ratings
+.ratings-page {
+  grid-template-areas:
+    'top-players ranking'
+    'leaderboard sports'
+    'leaderboard challenge';
+
+  @include tablet {
+    grid-template-areas:
+      'top-players'
+      'leaderboard';
+  }
+
+  .top-players {
+    grid-area: top-players;
+  }
+
+  .leaderboard {
+    grid-area: leaderboard;
+  }
+
+  .your-ranking {
+    grid-area: ranking;
+  }
+
+  .top-sports {
+    grid-area: sports;
+  }
+
+  .weekly-challenge {
+    grid-area: challenge;
+  }
+}
+
+// Settings
+.settings-page {
+  grid-template-areas:
+    'profile summary'
+    'notifications linked'
+    'security danger'
+    'app .'
+    'privacy .';
+
+  @include tablet {
+    grid-template-areas:
+      'profile'
+      'notifications'
+      'security'
+      'app'
+      'privacy';
+  }
+
+  .profile-info {
+    grid-area: profile;
+  }
+
+  .settings-section:nth-of-type(1) {
+    grid-area: notifications;
+  }
+
+  .settings-section:nth-of-type(2) {
+    grid-area: security;
+  }
+
+  .settings-section:nth-of-type(3) {
+    grid-area: app;
+  }
+
+  .settings-section:nth-of-type(4) {
+    grid-area: privacy;
+  }
+
+  .profile-summary {
+    grid-area: summary;
+  }
+
+  .linked-accounts {
+    grid-area: linked;
+  }
+
+  .danger-zone {
+    grid-area: danger;
+  }
+}

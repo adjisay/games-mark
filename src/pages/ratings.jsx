@@ -1,4 +1,3 @@
-import './index.scss'
 import TopPlayers from '@/sections/TopPlayers'
 import Leaderboard from '@/sections/Leaderboard'
 import YourRanking from '@/sections/YourRanking'
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default () => {
   return (
-    <div className="ratings-page">
+    <div className="page-grid ratings-page">
       <TopPlayers />
       <Leaderboard />
       <YourRanking />

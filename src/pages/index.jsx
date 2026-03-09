@@ -1,16 +1,15 @@
-import './index.scss'
 import HeroBanner from '@/sections/HeroBanner'
 import GamesSection from '@/sections/GamesSection'
 import CreateGame from '@/sections/CreateGame'
 import Notifications from '@/sections/Notifications'
 
 export const metadata = {
-  title: 'Home',
+  title: 'Matches',
 }
 
 export default () => {
   return (
-    <div className="home-page">
+    <div className="page-grid matches-page">
       <HeroBanner />
       <GamesSection />
       <CreateGame />
