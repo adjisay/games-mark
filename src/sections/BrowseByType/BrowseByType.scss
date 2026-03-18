@@ -1,0 +1,13 @@
+.browse-by-type {
+  padding: fluid(24, 20);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-l);
+  box-shadow: var(--shadow-card);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

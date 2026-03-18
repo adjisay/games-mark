@@ -1,0 +1,136 @@
+.bookmark-card {
+  display: flex;
+  align-items: center;
+  gap: fluid(16, 12);
+  padding: fluid(16, 12) 0;
+  border-bottom: 1px solid var(--color-border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__icon {
+    @include flex-center;
+    @include square(fluid(64, 48));
+
+    flex-shrink: 0;
+    background-color: var(--color-accent-light);
+    border-radius: fluid(16, 12);
+
+    &-svg {
+      @include square(fluid(32, 24));
+
+      color: var(--color-accent);
+    }
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  &__info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  &__title {
+    font-size: fluid(15, 14);
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  &__detail {
+    font-size: fluid(13, 12);
+    color: var(--color-text-muted);
+  }
+
+  &__bookmark {
+    @include flex-center;
+
+    flex-shrink: 0;
+    padding: 0;
+    color: var(--color-accent);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    .icon {
+      @include square(20px);
+    }
+
+    @include hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__attendees {
+    font-size: fluid(13, 12);
+    font-weight: 500;
+    color: var(--color-accent);
+  }
+
+  &__join {
+    margin-left: auto;
+    padding: fluid(6, 4) fluid(20, 16);
+    font-family: inherit;
+    font-size: fluid(13, 12);
+    font-weight: 500;
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: var(--border-radius-full);
+    cursor: pointer;
+
+    @include hover {
+      background-color: var(--color-accent-dark);
+    }
+  }
+
+  &__result {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &-badge {
+      padding: 2px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: var(--border-radius-full);
+
+      &--won {
+        color: var(--color-accent);
+        background-color: var(--color-accent-light);
+      }
+
+      &--lost {
+        color: var(--color-red);
+        background-color: rgb(239 68 68 / 10%);
+      }
+    }
+
+    &-score {
+      font-size: fluid(13, 12);
+      font-weight: 500;
+      color: var(--color-text-secondary);
+    }
+  }
+}
