@@ -59,6 +59,47 @@
   &__list {
     display: flex;
     flex-direction: column;
-    row-gap: 16px;
+    gap: 16px;
+
+    &.is-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(fluid(160, 140), 1fr));
+
+      @include mobile {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      }
+
+      .game-card {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .game-card__sport-icon {
+        @include square(fluid(56, 44));
+
+        border-radius: fluid(14, 10);
+
+        &-svg {
+          @include square(fluid(28, 22));
+        }
+      }
+
+      .game-card__title {
+        font-size: fluid(16, 14);
+      }
+
+      .game-card__detail {
+        font-size: fluid(13, 12);
+      }
+
+      .game-card__top {
+        flex-wrap: wrap;
+      }
+
+      .game-card__footer {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+    }
   }
 }

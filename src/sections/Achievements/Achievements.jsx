@@ -15,14 +15,14 @@ const achievements = [
     name: '10 Match Streak',
     description: 'Play 10 matches in a row',
     color: '#f7931a',
-    bgColor: '#fff7ed',
+    bgColor: '#f7931a1a',
   },
   {
     icon: 'trophy',
     name: 'MVP Award',
     description: 'Get voted as MVP',
     color: '#2babee',
-    bgColor: '#edf9ff',
+    bgColor: '#2babee1a',
   },
 ]
 

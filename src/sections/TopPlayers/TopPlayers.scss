@@ -19,14 +19,26 @@
     border-radius: 20px;
 
     &--gold {
-      background-color: #fefce8;
+      background-color: rgb(234 179 8 / 8%);
       border-width: 1.5px;
-      border-color: #fde047;
+      border-color: rgb(234 179 8 / 30%);
 
       [data-theme='dark'] & {
-        background-color: rgb(253 224 71 / 8%);
-        border-color: rgb(253 224 71 / 30%);
+        background-color: rgb(234 179 8 / 8%);
+        border-color: rgb(234 179 8 / 30%);
       }
+    }
+
+    &--silver {
+      background-color: rgb(192 192 192 / 10%);
+      border-width: 1.5px;
+      border-color: rgb(192 192 192 / 30%);
+    }
+
+    &--bronze {
+      background-color: rgb(205 127 50 / 10%);
+      border-width: 1.5px;
+      border-color: rgb(205 127 50 / 30%);
     }
   }
 

@@ -28,6 +28,22 @@ const gamesData = [
     attendees: 30,
     sport: 'FB',
   },
+  {
+    teamA: 'Red Bulls',
+    teamB: 'Hawks',
+    location: 'Central Arena',
+    time: '7:00 pm',
+    attendees: 18,
+    sport: 'BB',
+  },
+  {
+    teamA: 'Wolves',
+    teamB: 'Tigers',
+    location: 'Sports Park',
+    time: '3:30 pm',
+    attendees: 35,
+    sport: 'FB',
+  },
 ]
 
 const controlsMarkup = (
@@ -37,6 +53,7 @@ const controlsMarkup = (
         className="games-section__view-btn is-active"
         type="button"
         data-js-toggle-btn
+        data-js-view="grid"
       >
         <Icon name="grid-view" />
       </button>
@@ -44,6 +61,7 @@ const controlsMarkup = (
         className="games-section__view-btn"
         type="button"
         data-js-toggle-btn
+        data-js-view="list"
       >
         <Icon name="list-view" />
       </button>
@@ -63,7 +81,7 @@ export default () => {
       titleId="games-section-title"
       actions={controlsMarkup}
     >
-      <div className="games-section__list">
+      <div className="games-section__list is-grid" data-js-games-list>
         {gamesData.map((game, index) => (
           <GameCard key={index} {...game} />
         ))}

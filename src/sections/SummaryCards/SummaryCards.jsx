@@ -15,21 +15,21 @@ const cards = [
     value: '98',
     icon: 'trophy',
     iconColor: '#4caf50',
-    iconBg: '#e8f5e9',
+    iconBg: '#4caf501a',
   },
   {
     label: 'Losses',
     value: '42',
     icon: 'trophy',
     iconColor: '#ef4444',
-    iconBg: '#fef2f2',
+    iconBg: '#ef44441a',
   },
   {
     label: 'Win Rate',
     value: '70%',
     icon: 'trending-up',
     iconColor: '#f7931a',
-    iconBg: '#fff7ed',
+    iconBg: '#f7931a1a',
   },
 ]
 

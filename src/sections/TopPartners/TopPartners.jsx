@@ -14,14 +14,14 @@ const partners = [
     name: 'Maria Lopez',
     games: 18,
     color: '#2babee',
-    bgColor: '#edf9ff',
+    bgColor: '#2babee1a',
   },
   {
     initials: 'AT',
     name: 'Alex Turner',
     games: 12,
     color: '#f7931a',
-    bgColor: '#fff7ed',
+    bgColor: '#f7931a1a',
   },
 ]
 
