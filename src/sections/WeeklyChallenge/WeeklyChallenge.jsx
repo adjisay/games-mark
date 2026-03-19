@@ -4,7 +4,7 @@ import Section from '@/layouts/Section'
 
 export default () => {
   return (
-    <Section className="weekly-challenge" hideOnMobile>
+    <Section className="weekly-challenge">
       <div className="weekly-challenge__heading">
         <Icon className="weekly-challenge__heading-icon" name="trophy" />
         <span className="weekly-challenge__heading-text">Weekly Challenge</span>

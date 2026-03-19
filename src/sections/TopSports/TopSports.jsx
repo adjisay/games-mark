@@ -31,7 +31,6 @@ export default () => {
       className="top-sports"
       title="Top Sports"
       titleId="top-sports-title"
-      hideOnMobile
     >
       <div className="top-sports__list">
         {sports.map((sport) => (

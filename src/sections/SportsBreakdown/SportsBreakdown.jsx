@@ -14,7 +14,6 @@ export default () => {
       className="sports-breakdown"
       title="Sports"
       titleId="sports-breakdown-title"
-      hideOnMobile
     >
       <div className="sports-breakdown__list">
         {sports.map((sport) => (

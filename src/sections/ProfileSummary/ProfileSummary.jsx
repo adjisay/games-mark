@@ -9,7 +9,7 @@ const stats = [
 
 export default () => {
   return (
-    <Section className="profile-summary" hideOnMobile>
+    <Section className="profile-summary">
       <div className="profile-summary__avatar">DR</div>
       <h3 className="profile-summary__name">Daniel Robertson</h3>
       <span className="profile-summary__role">Pro Player</span>

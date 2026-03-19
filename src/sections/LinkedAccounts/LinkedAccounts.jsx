@@ -13,7 +13,6 @@ export default () => {
       className="linked-accounts"
       title="Linked Accounts"
       titleId="linked-accounts-title"
-      hideOnMobile
     >
       <div className="linked-accounts__list">
         {accounts.map((account) => (

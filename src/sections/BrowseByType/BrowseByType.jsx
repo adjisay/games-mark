@@ -41,7 +41,6 @@ export default () => {
       title="Browse by Type"
       titleId="browse-type-title"
       description="Filter your bookmarks"
-      hideOnMobile
     >
       <div className="browse-by-type__list">
         {types.map((type, index) => (

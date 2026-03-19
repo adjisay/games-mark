@@ -14,7 +14,6 @@ export default () => {
       className="your-ranking"
       title="Your Ranking"
       titleId="your-ranking-title"
-      hideOnMobile
     >
       <div className="your-ranking__rank-circle">
         <span className="your-ranking__rank-num">#12</span>

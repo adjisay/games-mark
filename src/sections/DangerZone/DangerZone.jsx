@@ -8,7 +8,6 @@ export default () => {
       className="danger-zone"
       title="Danger Zone"
       titleId="danger-zone-title"
-      hideOnMobile
     >
       <div className="danger-zone__actions">
         <button

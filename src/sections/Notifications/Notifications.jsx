@@ -25,7 +25,7 @@ const notificationsData = [
 
 export default () => {
   return (
-    <Section className="notifications-panel" hideOnMobile>
+    <Section className="notifications-panel">
       <div className="notifications-panel__header">
         <Icon
           className="notifications-panel__header-icon"

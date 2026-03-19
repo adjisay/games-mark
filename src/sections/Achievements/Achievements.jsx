@@ -32,7 +32,6 @@ export default () => {
       className="achievements"
       title="Achievements"
       titleId="achievements-title"
-      hideOnMobile
     >
       <div className="achievements__list">
         {achievements.map((item) => (

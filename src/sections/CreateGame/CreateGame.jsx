@@ -4,7 +4,7 @@ import Section from '@/layouts/Section'
 
 export default () => {
   return (
-    <Section className="create-game" hideOnMobile>
+    <Section className="create-game">
       <Icon className="create-game__icon" name="plus" />
       <h3 className="create-game__title">Create Game</h3>
       <p className="create-game__description">

@@ -31,7 +31,6 @@ export default () => {
       className="top-partners"
       title="Top Partners"
       titleId="top-partners-title"
-      hideOnMobile
     >
       <div className="top-partners__list">
         {partners.map((partner) => (

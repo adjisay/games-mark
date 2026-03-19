@@ -17,7 +17,9 @@
   @include tablet {
     grid-template-areas:
       'hero'
-      'games';
+      'games'
+      'create'
+      'notifications';
   }
 
   .hero-banner {
@@ -49,7 +51,10 @@
     grid-template-areas:
       'summary'
       'tournament'
-      'results';
+      'results'
+      'sports'
+      'achievements'
+      'partners';
   }
 
   .summary-cards {
@@ -86,8 +91,11 @@
 
   @include tablet {
     grid-template-areas:
+      'ranking'
       'top-players'
-      'leaderboard';
+      'leaderboard'
+      'sports'
+      'challenge';
   }
 
   .top-players {
@@ -123,8 +131,11 @@
   @include tablet {
     grid-template-areas:
       'profile'
+      'summary'
       'notifications'
+      'linked'
       'security'
+      'danger'
       'app'
       'privacy';
   }
@@ -167,7 +178,9 @@
   grid-template-areas: 'main browse';
 
   @include tablet {
-    grid-template-areas: 'main';
+    grid-template-areas:
+      'main'
+      'browse';
   }
 
   .bookmarks-main {
@@ -176,5 +189,53 @@
 
   .browse-by-type {
     grid-area: browse;
+  }
+}
+
+// Profile
+.profile-page {
+  grid-template-areas:
+    'profile-summary partners'
+    'ranking linked'
+    'achievements danger'
+    'sports .';
+
+  @include tablet {
+    grid-template-areas:
+      'profile-summary'
+      'ranking'
+      'achievements'
+      'sports'
+      'partners'
+      'linked'
+      'danger';
+  }
+
+  .profile-summary {
+    grid-area: profile-summary;
+  }
+
+  .your-ranking {
+    grid-area: ranking;
+  }
+
+  .achievements {
+    grid-area: achievements;
+  }
+
+  .sports-breakdown {
+    grid-area: sports;
+  }
+
+  .top-partners {
+    grid-area: partners;
+  }
+
+  .linked-accounts {
+    grid-area: linked;
+  }
+
+  .danger-zone {
+    grid-area: danger;
   }
 }
