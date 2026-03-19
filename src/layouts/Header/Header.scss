@@ -57,42 +57,14 @@
     column-gap: fluid(16, 8);
   }
 
-  &__badge {
-    display: flex;
-    align-items: center;
+  &__badge,
+  &__coins {
     gap: 8px;
     padding: 4px;
-    background-color: #edf9ff;
-    border: 1px solid #2babed;
-    border-radius: var(--border-radius-full);
+    font-size: fluid(16, 14);
 
-    &-label {
-      padding: 0 8px;
-      font-size: fluid(16, 13);
-      font-weight: 500;
-      color: transparent;
-      background: linear-gradient(225deg, #2bb0ed, #2b84ed);
-      background-clip: text;
-    }
-  }
-
-  &__coins {
-    display: flex;
-    align-items: center;
-    column-gap: 8px;
-    padding: 4px;
-    background-color: #f2fcec;
-    border: 1px solid var(--color-accent);
-    border-radius: var(--border-radius-full);
-
-    &-icon {
+    .badge__icon {
       @include square(fluid(32, 18));
-    }
-
-    &-value {
-      padding-right: 8px;
-      font-size: fluid(16, 14);
-      font-weight: 500;
     }
   }
 

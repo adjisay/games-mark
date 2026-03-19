@@ -1,6 +1,7 @@
 import './Leaderboard.scss'
 import clsx from 'clsx'
 import Section from '@/layouts/Section'
+import Badge from '@/components/Badge'
 
 const filters = ['All Sports', 'Football', 'Basketball', 'Tennis']
 
@@ -185,7 +186,11 @@ const renderRow = (row, extraClass) => (
       >
         {row.name}
       </span>
-      {extraClass && <span className="leaderboard__you-badge">You</span>}
+      {extraClass && (
+        <Badge className="leaderboard__you-badge" color="accent">
+          You
+        </Badge>
+      )}
     </div>
     <span className="leaderboard__cell leaderboard__cell--center">
       {row.games}

@@ -110,23 +110,6 @@
     align-items: center;
     gap: 8px;
 
-    &-badge {
-      padding: 2px 10px;
-      font-size: 12px;
-      font-weight: 500;
-      border-radius: var(--border-radius-full);
-
-      &--won {
-        color: var(--color-accent);
-        background-color: var(--color-accent-light);
-      }
-
-      &--lost {
-        color: var(--color-red);
-        background-color: rgb(239 68 68 / 10%);
-      }
-    }
-
     &-score {
       font-size: fluid(13, 12);
       font-weight: 500;

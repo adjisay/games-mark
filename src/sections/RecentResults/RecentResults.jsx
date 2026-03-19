@@ -1,6 +1,6 @@
 import './RecentResults.scss'
-import clsx from 'clsx'
 import Section from '@/layouts/Section'
+import Badge from '@/components/Badge'
 
 const results = [
   {
@@ -61,14 +61,12 @@ export default () => {
               {item.match}
             </span>
             <span className="recent-results__cell recent-results__cell--result">
-              <span
-                className={clsx(
-                  'recent-results__badge',
-                  `recent-results__badge--${item.resultType}`
-                )}
+              <Badge
+                color={item.resultType === 'win' ? 'green' : 'red'}
+                shape="rounded"
               >
                 {item.result}
-              </span>
+              </Badge>
             </span>
             <span className="recent-results__cell recent-results__cell--score">
               {item.score}
@@ -89,14 +87,12 @@ export default () => {
                 {item.score} &middot; {item.date}
               </span>
             </div>
-            <span
-              className={clsx(
-                'recent-results__badge',
-                `recent-results__badge--${item.resultType}`
-              )}
+            <Badge
+              color={item.resultType === 'win' ? 'green' : 'red'}
+              shape="rounded"
             >
               {item.result}
-            </span>
+            </Badge>
           </div>
         ))}
       </div>

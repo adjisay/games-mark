@@ -1,6 +1,7 @@
 import './TopPlayers.scss'
 import clsx from 'clsx'
 import Section from '@/layouts/Section'
+import Badge from '@/components/Badge'
 
 const players = [
   {
@@ -64,9 +65,9 @@ export default () => {
             </span>
             <span className="top-players__name">{player.name}</span>
             <span className="top-players__points">{player.points} pts</span>
-            <span className="top-players__win-rate">
+            <Badge className="top-players__win-rate" color="green">
               {player.winRate} Win Rate
-            </span>
+            </Badge>
           </div>
         ))}
       </div>

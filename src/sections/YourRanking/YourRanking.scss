@@ -30,20 +30,7 @@
   }
 
   &__change {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 4px 12px;
     font-size: 12px;
-    font-weight: 500;
-    color: var(--color-accent);
-    background-color: var(--color-accent-light);
-    border-radius: var(--border-radius-full);
-  }
-
-  &__change-icon {
-    width: 14px;
-    height: 14px;
   }
 
   &__stats {

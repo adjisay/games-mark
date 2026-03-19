@@ -1,6 +1,7 @@
 import './Header.scss'
 import Icon from '@/components/Icon'
 import Logo from '@/components/Logo'
+import Badge from '@/components/Badge'
 
 export default () => {
   return (
@@ -16,13 +17,23 @@ export default () => {
           />
         </div>
         <div className="header__actions">
-          <div className="header__badge hidden-tablet">
-            <span className="header__badge-label">Legend</span>
-          </div>
-          <div className="header__coins">
-            <Icon className="header__coins-icon" name="coins" />
-            <span className="header__coins-value">928</span>
-          </div>
+          <Badge
+            className="header__badge hidden-tablet"
+            color="blue"
+            bordered
+            icon="trophy"
+          >
+            Legend
+          </Badge>
+          <Badge
+            className="header__coins"
+            color="green"
+            bordered
+            icon="coins"
+            iconHasFill
+          >
+            928
+          </Badge>
           <button className="header__icon-btn hidden-tablet" type="button">
             <Icon name="message" />
           </button>

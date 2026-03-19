@@ -1,6 +1,12 @@
 import './TournamentProgress.scss'
-import clsx from 'clsx'
 import Section from '@/layouts/Section'
+import Badge from '@/components/Badge'
+
+const statusColorMap = {
+  live: 'green',
+  upcoming: 'blue',
+  finished: 'gray',
+}
 
 const tournaments = [
   {
@@ -62,14 +68,13 @@ export default () => {
             <span className="tournament-progress__cell tournament-progress__cell--pos">
               {item.position}
             </span>
-            <span
-              className={clsx(
-                'tournament-progress__badge',
-                `tournament-progress__badge--${item.statusType}`
-              )}
+            <Badge
+              className="tournament-progress__badge"
+              color={statusColorMap[item.statusType]}
+              shape="rounded"
             >
               {item.status}
-            </span>
+            </Badge>
           </div>
         ))}
       </div>
@@ -85,14 +90,13 @@ export default () => {
                 {item.wins}W / {item.losses}L &middot; {item.position}
               </span>
             </div>
-            <span
-              className={clsx(
-                'tournament-progress__badge',
-                `tournament-progress__badge--${item.statusType}`
-              )}
+            <Badge
+              className="tournament-progress__badge"
+              color={statusColorMap[item.statusType]}
+              shape="rounded"
             >
               {item.status}
-            </span>
+            </Badge>
           </div>
         ))}
       </div>

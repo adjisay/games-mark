@@ -1,6 +1,7 @@
 import './BookmarkCard.scss'
 import clsx from 'clsx'
 import Icon from '@/components/Icon'
+import Badge from '@/components/Badge'
 
 export default (props) => {
   const {
@@ -50,16 +51,9 @@ export default (props) => {
             </>
           ) : (
             <div className="bookmark-card__result">
-              <span
-                className={clsx(
-                  'bookmark-card__result-badge',
-                  isWon
-                    ? 'bookmark-card__result-badge--won'
-                    : 'bookmark-card__result-badge--lost'
-                )}
-              >
+              <Badge color={isWon ? 'green' : 'red'}>
                 {isWon ? 'Win' : 'Lost'}
-              </span>
+              </Badge>
               <span className="bookmark-card__result-score">{resultScore}</span>
             </div>
           )}

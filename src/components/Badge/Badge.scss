@@ -1,0 +1,70 @@
+.badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  // Shapes
+  &--pill {
+    border-radius: var(--border-radius-full);
+  }
+
+  &--rounded {
+    border-radius: var(--border-radius);
+  }
+
+  // Border
+  &--bordered {
+    border: 1px solid currentcolor;
+  }
+
+  // Colors
+  &--green {
+    color: var(--color-accent);
+    background-color: var(--color-accent-light);
+  }
+
+  &--red {
+    color: var(--color-red);
+    background-color: rgb(239 68 68 / 10%);
+  }
+
+  &--blue {
+    color: #2babee;
+    background-color: #edf9ff;
+  }
+
+  &--gray {
+    color: var(--color-text-muted);
+    background-color: var(--color-bg);
+  }
+
+  &--accent {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+  }
+
+  &--gold {
+    color: var(--color-white);
+    background-color: #eab308;
+  }
+
+  &--silver {
+    color: var(--color-white);
+    background-color: #c0c0c0;
+  }
+
+  &--bronze {
+    color: var(--color-white);
+    background-color: #cd7f32;
+  }
+
+  // Icon
+  &__icon {
+    @include square(14px);
+  }
+}

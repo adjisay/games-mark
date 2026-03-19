@@ -1,5 +1,5 @@
 import './YourRanking.scss'
-import Icon from '@/components/Icon'
+import Badge from '@/components/Badge'
 import Section from '@/layouts/Section'
 
 const stats = [
@@ -20,10 +20,13 @@ export default () => {
         <span className="your-ranking__rank-num">#12</span>
       </div>
       <span className="your-ranking__points">1,890 points</span>
-      <div className="your-ranking__change">
-        <Icon className="your-ranking__change-icon" name="trending-up" />
-        <span>+3 this week</span>
-      </div>
+      <Badge
+        className="your-ranking__change"
+        color="green"
+        icon="trending-up"
+      >
+        +3 this week
+      </Badge>
       <div className="your-ranking__stats">
         {stats.map((stat) => (
           <div className="your-ranking__stat" key={stat.label}>

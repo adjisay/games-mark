@@ -73,26 +73,6 @@
     }
   }
 
-  &__badge {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 12px;
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 8px;
-
-    &--win {
-      color: #4caf50;
-      background-color: #e8f5e9;
-    }
-
-    &--loss {
-      color: #ef4444;
-      background-color: #fef2f2;
-    }
-  }
-
   &__list {
     display: none;
 
