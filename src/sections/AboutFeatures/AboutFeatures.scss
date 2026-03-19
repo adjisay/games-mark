@@ -1,0 +1,45 @@
+.about-features {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(20, 12);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: fluid(24, 16);
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius);
+  }
+
+  &__icon {
+    @include flex-center;
+    @include square(fluid(48, 40));
+
+    color: var(--color-accent);
+    background-color: var(--color-accent-light);
+    border-radius: var(--border-radius);
+
+    svg {
+      @include square(fluid(24, 20));
+    }
+  }
+
+  &__card-title {
+    font-size: fluid(18, 16);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  &__card-text {
+    font-size: fluid(14, 13);
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+  }
+}

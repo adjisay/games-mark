@@ -18,7 +18,7 @@
     cursor: pointer;
 
     &.is-active {
-      color: #ffffff;
+      color: var(--color-white);
       background-color: var(--color-accent);
       border-color: var(--color-accent);
     }
@@ -57,7 +57,7 @@
     align-items: center;
     gap: 8px;
     padding: 14px 16px;
-    border-bottom: 1px solid #f3f4f6;
+    border-bottom: 1px solid var(--color-border);
 
     @include mobile {
       grid-template-columns: 30px 1fr auto;

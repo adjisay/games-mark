@@ -2,6 +2,7 @@ class ThemeSwitcher {
   selectors = {
     root: '[data-js-theme-switcher]',
     button: '[data-js-theme-btn]',
+    toggle: '[data-js-theme-toggle]',
   }
 
   stateClasses = {
@@ -12,15 +13,18 @@ class ThemeSwitcher {
 
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root)
+    this.toggleButtons = document.querySelectorAll(this.selectors.toggle)
     this.applyStoredTheme()
 
-    if (!this.rootElement) {
-      return
+    if (this.rootElement) {
+      this.buttons = this.rootElement.querySelectorAll(this.selectors.button)
+      this.syncButtons()
+      this.bindSwitcherEvents()
     }
 
-    this.buttons = this.rootElement.querySelectorAll(this.selectors.button)
-    this.syncButtons()
-    this.bindEvents()
+    if (this.toggleButtons.length) {
+      this.bindToggleEvents()
+    }
   }
 
   get currentTheme() {
@@ -36,6 +40,10 @@ class ThemeSwitcher {
   }
 
   syncButtons() {
+    if (!this.buttons) {
+      return
+    }
+
     this.buttons.forEach((btn) => {
       const theme = btn.getAttribute('data-js-theme-btn')
 
@@ -63,9 +71,21 @@ class ThemeSwitcher {
     this.setTheme(theme)
   }
 
-  bindEvents() {
+  onToggleClick = () => {
+    const newTheme = this.currentTheme === 'dark' ? 'light' : 'dark'
+
+    this.setTheme(newTheme)
+  }
+
+  bindSwitcherEvents() {
     this.buttons.forEach((btn) => {
       btn.addEventListener('click', this.onButtonClick)
+    })
+  }
+
+  bindToggleEvents() {
+    this.toggleButtons.forEach((btn) => {
+      btn.addEventListener('click', this.onToggleClick)
     })
   }
 }

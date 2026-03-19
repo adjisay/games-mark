@@ -144,12 +144,13 @@ const currentUser = {
 }
 
 const filtersMarkup = (
-  <div className="leaderboard__filters">
+  <div className="leaderboard__filters" data-js-toggle-group>
     {filters.map((filter, index) => (
       <button
         className={clsx('leaderboard__filter', index === 0 && 'is-active')}
         type="button"
         key={filter}
+        data-js-toggle-btn
       >
         {filter}
       </button>

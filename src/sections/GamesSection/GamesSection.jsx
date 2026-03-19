@@ -32,12 +32,22 @@ const gamesData = [
 
 const controlsMarkup = (
   <div className="games-section__controls">
-    <button className="games-section__view-btn is-active" type="button">
-      <Icon name="grid-view" />
-    </button>
-    <button className="games-section__view-btn" type="button">
-      <Icon name="list-view" />
-    </button>
+    <div className="games-section__views" data-js-toggle-group>
+      <button
+        className="games-section__view-btn is-active"
+        type="button"
+        data-js-toggle-btn
+      >
+        <Icon name="grid-view" />
+      </button>
+      <button
+        className="games-section__view-btn"
+        type="button"
+        data-js-toggle-btn
+      >
+        <Icon name="list-view" />
+      </button>
+    </div>
     <div className="games-section__sort">
       <Icon className="games-section__sort-icon" name="sort" />
       <span>Newest</span>

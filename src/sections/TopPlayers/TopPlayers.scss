@@ -22,6 +22,11 @@
       background-color: #fefce8;
       border-width: 1.5px;
       border-color: #fde047;
+
+      [data-theme='dark'] & {
+        background-color: rgb(253 224 71 / 8%);
+        border-color: rgb(253 224 71 / 30%);
+      }
     }
   }
 
@@ -33,7 +38,7 @@
     height: 32px;
     font-size: 16px;
     font-weight: 500;
-    color: #ffffff;
+    color: var(--color-white);
     border-radius: var(--border-radius-full);
 
     &--gold {

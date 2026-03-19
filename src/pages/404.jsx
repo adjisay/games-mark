@@ -1,14 +1,9 @@
-import Button from '@/components/Button'
+import NotFound from '@/sections/NotFound'
 
 export const metadata = {
   title: 'Not found',
 }
 
 export default () => {
-  return (
-    <>
-      <h1>Page not found</h1>
-      <Button href="/">Home</Button>
-    </>
-  )
+  return <NotFound />
 }

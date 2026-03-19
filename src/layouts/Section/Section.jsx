@@ -2,19 +2,11 @@ import './Section.scss'
 import clsx from 'clsx'
 
 export default (props) => {
-  const {
-    className,
-    title,
-    titleId,
-    description,
-    actions,
-    hideOnMobile,
-    children,
-  } = props
+  const { className, title, titleId, description, actions, children } = props
 
   return (
     <section
-      className={clsx('section', className, { 'hidden-tablet': hideOnMobile })}
+      className={clsx('section', className)}
       aria-labelledby={titleId}
     >
       {title && (

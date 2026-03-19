@@ -1,0 +1,38 @@
+.not-found {
+  @include flex-center;
+
+  flex-direction: column;
+  gap: fluid(16, 12);
+  padding: fluid(80, 40) fluid(24, 16);
+  text-align: center;
+
+  &__icon {
+    @include flex-center;
+    @include square(fluid(80, 60));
+
+    color: var(--color-text-muted);
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius-full);
+
+    svg {
+      @include square(fluid(36, 28));
+    }
+  }
+
+  &__title {
+    font-size: fluid(72, 48);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-text-primary);
+  }
+
+  &__text {
+    max-width: 360px;
+    font-size: fluid(16, 14);
+    color: var(--color-text-secondary);
+  }
+
+  &__btn {
+    margin-top: fluid(8, 4);
+  }
+}

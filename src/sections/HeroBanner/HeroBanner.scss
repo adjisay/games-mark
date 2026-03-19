@@ -4,8 +4,13 @@
   justify-content: space-between;
   align-items: flex-end;
   padding: fluid(32, 20) fluid(32, 16);
-  background: linear-gradient(265deg, #ffffff 0%, #e7fbdc 100%);
+  background: linear-gradient(265deg, var(--color-bg-card) 0%, #e7fbdc 100%);
   border: 1px solid #c2f9a7;
+
+  [data-theme='dark'] & {
+    background: linear-gradient(265deg, var(--color-bg-card) 0%, rgb(92 191 42 / 10%) 100%);
+    border-color: rgb(92 191 42 / 20%);
+  }
   border-radius: var(--border-radius-xl);
 
   @include mobile {

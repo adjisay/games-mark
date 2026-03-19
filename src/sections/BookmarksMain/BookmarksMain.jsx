@@ -49,12 +49,13 @@ const pastGames = [
 ]
 
 const filtersMarkup = (
-  <div className="bookmarks-main__filters">
+  <div className="bookmarks-main__filters" data-js-toggle-group>
     {filters.map((filter, index) => (
       <button
         className={`bookmarks-main__filter${index === 0 ? ' is-active' : ''}`}
         type="button"
         key={filter}
+        data-js-toggle-btn
       >
         {filter}
       </button>

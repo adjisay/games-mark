@@ -45,8 +45,10 @@ export default (props) => {
         <div className="game-card__footer">
           <div className="game-card__attendees">
             <div className="game-card__attendees-avatars">
-              {[...Array(5)].map((_, i) => (
-                <span className="game-card__attendees-dot" key={i} />
+              {['JK', 'ML', 'AT', 'SW', 'RD'].map((initials, i) => (
+                <span className="game-card__attendees-avatar" key={i}>
+                  {initials}
+                </span>
               ))}
             </div>
             <span className="game-card__attendees-text">

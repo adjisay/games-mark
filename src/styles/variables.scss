@@ -57,21 +57,29 @@
 }
 
 [data-theme='dark'] {
-  --color-bg: #1a1a2e;
-  --color-bg-white: #16213e;
-  --color-bg-sidebar: #16213e;
-  --color-bg-card: #16213e;
+  --color-white: #ffffff;
+  --color-black: #e4e6eb;
+
+  --color-accent: #5cbf2a;
+  --color-accent-light: rgb(92 191 42 / 12%);
+  --color-accent-dark: #4aa31f;
+  --color-accent-bg: rgb(92 191 42 / 8%);
+
+  --color-bg: #0f0f0f;
+  --color-bg-white: #1a1a1a;
+  --color-bg-sidebar: #141414;
+  --color-bg-card: #1a1a1a;
 
   --color-text-primary: #e4e6eb;
-  --color-text-secondary: #b0b3b8;
-  --color-text-muted: #8a8d91;
+  --color-text-secondary: #a8adb3;
+  --color-text-muted: #6b7280;
 
-  --color-border: #2d3748;
-  --color-border-light: #2d3748;
+  --color-border: #2a2a2a;
+  --color-border-light: #252525;
 
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 20%);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 25%), 0 2px 4px -2px rgb(0 0 0 / 20%);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 30%);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 40%), 0 2px 4px -2px rgb(0 0 0 / 30%);
   --shadow-lg:
-    0 10px 15px -3px rgb(0 0 0 / 25%), 0 4px 6px -4px rgb(0 0 0 / 20%);
-  --shadow-card: 0 1px 3.5px rgb(0 0 0 / 20%);
+    0 10px 15px -3px rgb(0 0 0 / 40%), 0 4px 6px -4px rgb(0 0 0 / 30%);
+  --shadow-card: 0 1px 3.5px rgb(0 0 0 / 30%);
 }

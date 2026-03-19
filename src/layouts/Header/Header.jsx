@@ -5,7 +5,7 @@ import Badge from '@/components/Badge'
 
 export default () => {
   return (
-    <header className="header">
+    <header className="header" data-js-header>
       <div className="header__inner">
         <Logo className="header__logo visible-tablet" loading="eager" />
         <div className="header__search hidden-tablet">
@@ -17,6 +17,15 @@ export default () => {
           />
         </div>
         <div className="header__actions">
+          <button
+            className="header__theme-toggle"
+            type="button"
+            data-js-theme-toggle
+            aria-label="Toggle theme"
+          >
+            <Icon className="header__theme-icon header__theme-icon--sun" name="sun" />
+            <Icon className="header__theme-icon header__theme-icon--moon" name="moon" />
+          </button>
           <Badge
             className="header__badge hidden-tablet"
             color="blue"
@@ -40,8 +49,12 @@ export default () => {
           <button className="header__icon-btn hidden-tablet" type="button">
             <Icon name="notification" />
           </button>
-          <button className="header__icon-btn visible-tablet" type="button">
-            <Icon name="bookmark" />
+          <button
+            className="header__icon-btn visible-tablet"
+            type="button"
+            data-js-header-search-toggle
+          >
+            <Icon name="search" />
           </button>
           <div className="header__profile hidden-tablet">
             <div className="header__profile-avatar">
@@ -54,6 +67,14 @@ export default () => {
             <Icon className="header__profile-chevron" name="chevron-down" />
           </div>
         </div>
+      </div>
+      <div className="header__mobile-search visible-tablet" data-js-header-mobile-search>
+        <Icon className="header__search-icon" name="search" />
+        <input
+          className="header__search-input"
+          type="search"
+          placeholder="Find games..."
+        />
       </div>
     </header>
   )

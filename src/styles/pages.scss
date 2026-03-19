@@ -192,6 +192,13 @@
   }
 }
 
+// About
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: fluid(24, 16);
+}
+
 // Profile
 .profile-page {
   grid-template-areas:

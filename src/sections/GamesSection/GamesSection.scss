@@ -5,6 +5,12 @@
     column-gap: 8px;
   }
 
+  &__views {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
   &__view-btn {
     @include flex-center;
     @include square(36px);
